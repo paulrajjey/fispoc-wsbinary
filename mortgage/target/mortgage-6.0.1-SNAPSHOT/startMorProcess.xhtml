@@ -1,0 +1,45 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+
+    <ui:param name="pageTitle" value="Start a rewards process" />
+
+    <ui:define name="content">
+        <h:form>
+              <fieldset>
+            <h:panelGrid columns="2">
+ 
+                <h:outputLabel value="Name" for="name" />
+                <h:inputText id="name" value="#{startProcessController.name}" />
+               
+                <h:outputLabel value="SSN" for="ssn" />
+                <h:inputText id="ssn" value="#{startProcessController.ssn}" />
+               
+                <h:outputLabel value="Annual Income" for="annualIncome" />
+                <h:inputText id="annualIncome" value="#{startProcessController.annualIncome}" />
+              
+                <h:outputLabel value="Address" for="address" />
+                <h:inputText id="address" value="#{startProcessController.address}" />
+               
+                <h:outputLabel value="Sales Price" for="salesPrice" />
+                <h:inputText id="salesPrice" value="#{startProcessController.salesPrice}" />
+               
+                <h:outputLabel value="Down Payment" for="downPayment" />
+                <h:inputText id="downPayment" value="#{startProcessController.downPayment}" />
+               
+                <h:outputLabel value="Amortization" for="amortization" />
+                <h:inputText id="amortization" value="#{startProcessController.amortization}" />
+              <h:outputLabel />
+             
+              <fieldset>
+                <h:commandButton action="#{startProcessController.startProcess}" value="Submit" />
+               </fieldset>
+            </h:panelGrid>
+             </fieldset>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+

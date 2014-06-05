@@ -1,0 +1,15 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+        <p>Welcome to Mortgage Process web front end!</p>
+        <fieldset>
+        <ul>
+            <li><h:link outcome="startMorProcess.xhtml">Start a Mortgae business process</h:link></li>
+            <li><h:link outcome="listTasks.xhtml?user=jey">Task management</h:link></li>
+            <li><h:link outcome="processManagement.xhtml">Process management</h:link></li>
+        </ul>
+        </fieldset>
+    </ui:define>
+</ui:composition>

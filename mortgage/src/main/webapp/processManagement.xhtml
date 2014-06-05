@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+
+    <ui:param name="pageTitle" value="event process handler" />
+
+    <ui:define name="content">
+        <h:form>
+         <fieldset>
+            <h:panelGrid columns="2"> 
+                 <h:outputLabel value="Mortgage Id" for="mortgageId" />
+                <h:inputText id="mortgageId" value="#{startProcessController.mortgageId}" />
+                <h:outputLabel value="Signal Name" for="eventName" />
+                <h:selectOneMenu id="eventName" value="#{startProcessController.eventName}">
+                    <f:selectItem itemValue="finalreview"/>
+                    <f:selectItem itemValue="cancel"/>
+                </h:selectOneMenu>
+                            
+                <h:outputLabel value="Message" for="eventData" />
+                <h:inputText id="eventData" value="#{startProcessController.eventData}" />
+                <h:outputLabel />
+             
+              <fieldset>
+                <h:commandButton action="#{startProcessController.sendSignal}" value="Submit" />
+               </fieldset>
+            </h:panelGrid>
+             </fieldset>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
+
